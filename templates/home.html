@@ -1,0 +1,87 @@
+{%  load  static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #eee;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        img{
+            width: 900px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> TATA GROUPS  </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url  'profile' %}">Profile</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}">login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to TATA GROUPS !</h1>
+        <p>The Tata Group  is an Indian multinational conglomerate headquartered in Mumbai.[4][5] Established in 1868, it is India's largest conglomerate, with products and services in over 150 countries, and operations in 100 countries across six continents.[6] Acknowledged as the founder of the Tata Group, Jamsetji Tata is sometimes referred to as the "father of Indian industry".[7]
+
+            Each Tata company operates independently under the guidance and supervision of its own board of directors and shareholders.[8] Philanthropic trusts control over 66% of the Tata holding company Tata Sons,[9] while the Tata family is a very small shareholder.[10]</p>
+
+    </main>
+     <div>
+        <center>
+            <img src="{% static 'image/tata.jpg' %}" alt="tata">
+        </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .card a:hover {
+            background-color: #666;
+        }
+        nav {
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        header{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color:yellow">TATA GROUPS</h1>
+    </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url  'profile' %}">Profile</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>My Profile</h1>
+    <div class="container">
+               <div class="card">
+            <img src="{% static 'image/rohan.jpg' %}" alt="Profile Picture">
+            <h2>Rohan Sahoo</h2>
+            <h3>Name : Rohan Sahoo</h3>
+            <h5>contact:8693875483</h5>
+            <h5>Email:rohansahoo4@gmail.com</h5>
+            <a href="#">View Profile</a>
+        </div>
+        
+    </div>
+</body>
+</html>
